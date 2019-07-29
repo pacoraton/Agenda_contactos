@@ -40,7 +40,7 @@
 
         <div class="contenedor-tabla">
 
-            <table>
+            <table class="listado-contactos">
               <thead>
                     <tr>
                         <th>Nombre</th>
