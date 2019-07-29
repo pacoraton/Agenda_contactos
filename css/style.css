@@ -1,0 +1,75 @@
+:root{
+    --primario:#C2185B;
+    --secundario:#FFDA33;
+    --primarioObscuro:rgb(156,10,69);
+
+    --fuentePrimaria:'Arial',Helvetica,sans-serif;
+    --fuenteSecundario:'Poppins',sans-serif;
+
+}
+
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+body{
+    background-color:var(--primario);
+    font-family: var(--fuentePrimaria);
+}
+
+.contenedor{
+    max-width:1100px;
+    margin:0 auto;
+}
+
+.bg-amarillo{
+    background:var(--secundario);
+}
+
+.sombra{
+-webkit-box-shadow: 2px 6px 13px 3px rgba(0,0,0,0.75);
+-moz-box-shadow: 2px 6px 13px 3px rgba(0,0,0,0.75);
+box-shadow: 2px 6px 13px 3px rgba(0,0,0,0.75);
+}
+
+
+h1,h2{
+    font-family:var(--fuenteSecundario);
+    text-align:center;
+    margin:0;
+}
+
+.cabecera-barra{
+    background-color: var(--primarioObscuro);
+}
+
+h1{
+    color:white;
+    padding:10px;
+}
+
+/*formulario*/
+form{
+    padding:3rem;
+    margin-top:2rem;
+}
+
+form legend{
+    font-family:var(--fuenteSecundario);
+    font-size:2rem;
+    text-align:center;
+    display:block;
+}
+
+legend span{
+    font-size: 1rem;
+    margin-top:1rem;
+    clear:both;
+    display:block;
+
+}

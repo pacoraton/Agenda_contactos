@@ -1,6 +1,6 @@
 <?php include 'inc/layout/header.php'; ?>
 
- <div class='cabecera' >
+ <div class='cabecera-barra' >
      <h1>Agenda Contactos</h1>
  </div>
 
