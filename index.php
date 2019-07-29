@@ -8,24 +8,7 @@
     <form id="contacto" action="#">
         <legend>Añada un contacto. <span>Todos los campos son obligatorios</span></legend>
         
-        <div class="campos">
-            <div class="campo">
-                <label for="nombre">Nombre: </label>        
-                <input type="text" id="nombre" placeholder="Nombre Contacto" >
-            </div> 
-            <div class="campo">
-                <label for="empresa">Empresa: </label>        
-                <input type="text" id="empresa" placeholder="Empresa" >
-            </div> 
-            <div class="campo">
-                <label for="telefono">Teléfono: </label>        
-                <input type="tel" id="telefono" placeholder="Teléfono">
-            </div>  
-        </div>
-
-        <div class="campo enviar">        
-                <input type="submit" id="añadir" value="Añadir" >
-        </div> 
+        <?php include 'inc/layout/formulario.php'; ?>
     </form>
  </div>
 
@@ -55,7 +38,7 @@
                         <td>Ninguna</td>
                         <td>932344</td>
                         <td>
-                            <a class="btn-editar btn" href="#">
+                            <a class="btn-editar btn" href="editar.php?id=1">
                                 <i class="fas fa-pen-square"></i> 
                             </a>
                             <button data-id='1' type="button" class="btn-borrar btn">
@@ -68,7 +51,7 @@
                         <td>Ninguna</td>
                         <td>932344</td>
                         <td>
-                            <a class="btn-editar btn" href="#">
+                            <a class="btn-editar btn" href="editar.php?id=1">
                                 <i class="fas fa-pen-square"></i> 
                             </a>
                             <button data-id='1' type="button" class="btn-borrar btn">
@@ -81,7 +64,7 @@
                         <td>Ninguna</td>
                         <td>932344</td>
                         <td>
-                            <a class="btn-editar btn" href="#">
+                            <a class="btn-editar btn" href="editar.php?id=1">
                                 <i class="fas fa-pen-square"></i> 
                             </a>
                             <button data-id='1' type="button" class="btn-borrar btn">

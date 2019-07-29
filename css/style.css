@@ -33,7 +33,21 @@ body{
 
 .bg-blanco{
     background-color:white;
+
 }
+
+/*Editar.php*/
+.barra{
+   display:grid;  
+   grid-template-columns:100px 1fr;
+   align-items:center;
+    
+}
+
+
+
+
+
 .sombra{
 -webkit-box-shadow: 2px 6px 13px 3px rgba(0,0,0,0.75);
 -moz-box-shadow: 2px 6px 13px 3px rgba(0,0,0,0.75);
@@ -208,6 +222,8 @@ legend span{
     border:none;
 }
 
+
+/**-------Botones--------**/
 .btn{
     font-size:2rem;
     text-decoration:none;
@@ -220,4 +236,16 @@ legend span{
 
 .btn-borrar{
     color:var(--primario);
+}
+
+/**volver editar.php**/
+.volver{
+    background-color:var(--secundario);
+    border-radius:5px;
+    text-align:center;
+    color:#000000;
+    font-weight:700;
+    font-size:1.2rem;
+    padding:.5rem;
+    
 }
