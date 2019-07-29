@@ -249,3 +249,31 @@ legend span{
     padding:.5rem;
     
 }
+
+
+
+/*clase que se crea al agregar el elemento donde ira la notificacion*/
+.notificacion{
+position:fixed;
+top:1rem;
+right:1rem;
+padding:.5rem 1rem;
+opacity:0;
+transition:opacity .7s ease;
+border-radius:7px;
+}
+
+/*Notificaciones*/
+.visible{
+    opacity:1;
+}
+
+/*  Colores de las notificacion*/
+.correcto{
+    background-color:rgba(179,241,117);
+    color:green;
+}
+.error{
+    background-color:rgba(238,148,166);
+    color:rgb(163,0,33);
+}
