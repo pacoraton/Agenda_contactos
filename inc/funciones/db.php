@@ -10,7 +10,7 @@
   //Conexion a la base de datos(host,user,password,name_database)  
   $conn= new mysqli($host,$usuario,$contraseña,$nombre);
 
-  echo $conn->ping();
+  //echo $conn->ping();
 
 
 ?>
