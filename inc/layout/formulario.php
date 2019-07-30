@@ -13,6 +13,7 @@
             </div>  
 </div>
 
-        <div class="campo enviar">        
+        <div class="campo enviar"> 
+                <input type="hidden" id="accion" value="crear">      
                 <input type="submit" id="añadir" value="Añadir" >
         </div> 

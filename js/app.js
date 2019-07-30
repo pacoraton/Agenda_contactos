@@ -15,19 +15,60 @@ function leerformulario(e){
     const nombre=document.querySelector('#nombre').value;
     const empresa=document.querySelector('#empresa').value;
     const telefono=document.querySelector('#telefono').value;
+    const accion=document.querySelector('#accion').value;
 
     if(nombre === '' || empresa === '' || telefono ==='') {
         //2 parametros: texto y clase
         mostrarNotificacion("Todos los campos son Obligatorios","error");
         //console.log('No puede haber campos vacios');
     }else{
-         console.log('agregado');
+         //Pasa la validacion, crear llamando a ajax
+
+         const infoContacto= new FormData();
+          infoContacto.append('nombre',nombre);
+          infoContacto.append('empresa',empresa);
+          infoContacto.append('telefono',telefono);
+          infoContacto.append('accion',accion);
+
+          //console.log(...infoContacto);
+            if(accion === 'crear'){
+                 //Crearemos un nuevo Contacto
+                 insertarBD(infoContacto);    
+            }else{
+                //Editar contacto
+            }
+           
     }
 
-
-    
 }
 
+//Inserta en la base de datos via Ajax
+function insertarBD(datos){
+    //llamado a ajax
+
+
+    //crear el objeto
+    const xhr =new XMLHttpRequest();
+
+
+
+    //abrir la conexion
+        xhr.open('POST','inc/modelos/modelos-contactos.php',true); 
+
+    //pasar los datos
+    xhr.onload=function(){
+        if(this.status===200){
+            console.log(JSON.parse(xhr.responseText));
+            //Leemos la respuesta de PHP
+            const respuesta= JSON.parse(xhr.responseText);
+            console.log(respuesta.nombre);
+
+        }
+    }
+
+    //enviar los datos
+    xhr.send(datos)
+}
 
 //Notificacion en pantalla
 function mostrarNotificacion(mensaje,clase){
@@ -43,7 +84,9 @@ function mostrarNotificacion(mensaje,clase){
         notificacion.classList.add('visible');
         setTimeout(() => {
         notificacion.classList.remove('visible'); 
-        notificacion.remove();
+        setTimeout(() => {
+            notificacion.remove();
+        }, 500);
         }, 3000);
     }, 100);
 
